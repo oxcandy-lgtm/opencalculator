@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/ccl.opencalculator.state.v1.json",
+  "title": "Open Calculator CCL Public State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "updated_at",
+    "classification",
+    "canonical",
+    "experimental",
+    "unverified",
+    "rejected",
+    "known_limitations",
+    "evidence_refs",
+    "next_task"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ccl.opencalculator.state.v1"
+    },
+    "project": {
+      "const": "Open Calculator"
+    },
+    "updated_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "classification": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical": {
+      "type": "object"
+    },
+    "experimental": {
+      "type": "object"
+    },
+    "unverified": {
+      "type": "object"
+    },
+    "rejected": {
+      "type": "object"
+    },
+    "known_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^REF-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "next_task": {
+      "type": ["string", "null"]
+    }
+  }
+}

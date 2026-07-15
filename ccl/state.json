@@ -1,0 +1,68 @@
+{
+  "schema_version": "ccl.opencalculator.state.v1",
+  "project": "Open Calculator",
+  "updated_at": null,
+  "classification": "experimental_public_design",
+  "canonical": {
+    "shared_authority": "One authoritative expression and result order per room.",
+    "atomic_equal": "Successful Equal settlement atomically debits seg, mints ownership, records evidence, and resets the round.",
+    "stale_equal": "Stale Equal attempts are rejected without charge.",
+    "safe_evaluation": "Dynamic code evaluation is prohibited.",
+    "model_boundary": "GPT-5.6 may canonize meaning but is not authoritative for evaluation, balances, fees, rarity, registry, editions, ownership, or settlement.",
+    "publication_boundary": "Public evidence excludes credentials, private operational data, personal contact information, local paths, and unrelated private projects."
+  },
+  "experimental": {
+    "sai_epochcast": {
+      "status": "experimental",
+      "specification_ref": "REF-EPOCHCAST-SPEC",
+      "micro_epoch_target_ms": 40,
+      "promotion_gate": "Correctness, fairness, recovery, latency, and audience-efficiency gates must pass against simpler baselines."
+    },
+    "spectator_stream": {
+      "status": "experimental",
+      "promotion_gate": "Active and spectator lanes must converge on the same committed state hash under fault injection."
+    },
+    "rust_wasm_evaluator": {
+      "status": "experimental",
+      "promotion_gate": "Must preserve canonical semantics and provide a measured benefit that justifies added complexity."
+    },
+    "game_systems": {
+      "cult_roles": "experimental",
+      "heresy_counterbalance": "experimental",
+      "peak_faith_level": "experimental",
+      "meaningless_statistics": "experimental",
+      "fixed_price_marketplace": "experimental"
+    }
+  },
+  "unverified": {
+    "production_capacity": null,
+    "cost_reduction": null,
+    "regional_fairness": null,
+    "cache_request_collapse": null,
+    "protocol_novelty": null,
+    "final_economy_balance": null
+  },
+  "rejected": {
+    "javascript_eval": "Expressions must not execute as dynamic code.",
+    "model_as_economic_authority": "Model output cannot decide authoritative economic state.",
+    "stale_equal_charge": "A losing stale Equal attempt cannot be charged.",
+    "target_as_measurement": "A scale or performance target cannot be reported as an observed result."
+  },
+  "known_limitations": [
+    "Distributed order is a protocol decision rather than an absolute physical truth.",
+    "A short epoch window does not by itself bound payload size.",
+    "Merkle commitment does not prove correct execution.",
+    "Dual-lane publication introduces recovery and coherence requirements.",
+    "Model canonization can produce unsupported semantic claims.",
+    "The complete hackathon design is broader than the minimum live implementation."
+  ],
+  "evidence_refs": [
+    "REF-PAPER",
+    "REF-EPOCHCAST-SPEC",
+    "REF-ATOMIC-EQUAL-SPEC",
+    "REF-OPEN-PROBLEMS",
+    "REF-BENCHMARK-PLAN",
+    "REF-PUBLICATION-POLICY"
+  ],
+  "next_task": "Implement and verify the smallest live P0 path before promoting any experimental architecture claim."
+}

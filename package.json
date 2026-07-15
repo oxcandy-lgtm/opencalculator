@@ -1,0 +1,14 @@
+{
+  "name": "open-calculator-research",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "safety": "node scripts/public-safety.mjs --tracked",
+    "test:safety": "node --test tests/public-safety.test.mjs",
+    "test": "npm run test:safety && npm run safety"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
